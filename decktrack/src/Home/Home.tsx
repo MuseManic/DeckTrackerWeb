@@ -1,43 +1,64 @@
 import CardBack from '../assets/magiccardback.jpeg';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import Track from '../Track/Track';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <>
+    <div className="relative w-full h-screen flex flex-col items-center overflow-hidden">
       <Navbar />
       <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
-        <LoadImage />
-        <DiagonalBanner />
+      <ImageContainer/>
+        <DiagonalBanner1 />
       </div>
-      <Navigate /> {/* Ensure routes are included */}
-    </>
+    </div>
   );
 }
 
-function Navigate() {
+function DiagonalBanner1() {
   return (
-    <Routes>
-      <Route path="/about" element={<About />} />
-      <Route path="/track" element={<Track />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <div className="animate-fadeIn absolute w-full h-48 bg-black transform rotate-45 flex justify-center items-center">
+      <h1 className="animiate-fadeIn text-white text-6xl font-bold">Deck Tracker</h1>
+    </div>
   );
 }
 
-function DiagonalBanner() {
+function ImageContainer() {
   return (
-    <div className="absolute w-full h-48 bg-black transform rotate-45 flex justify-center items-center">
-      <h1 className="text-white text-6xl font-bold">Deck Tracker</h1>
+    <div className="flex justify-center items-center space-x-4">
+      <LoadImage />
+      <LoadImage2 />
+      <LoadImage3 />
+      <LoadImage4 />
     </div>
   );
 }
 
 function LoadImage() {
   return (
-    <div className="absolute top-1/2 right-1/4 transform -translate-x-1/2 -translate-y-1/2 rotate-45">
+    <div className="animate-org transform rotate-45">
+      <img src={CardBack} alt="Magic Card Back" className="max-w-xs" />
+    </div>
+  );
+}
+
+function LoadImage2() {
+  return (
+    <div className="animate-org2 transform rotate-45">
+      <img src={CardBack} alt="Magic Card Back" className="max-w-xs" />
+    </div>
+  );
+}
+
+function LoadImage3() {
+  return (
+    <div className="animate-org3 transform rotate-45">
+      <img src={CardBack} alt="Magic Card Back" className="max-w-xs" />
+    </div>
+  );
+}
+
+function LoadImage4() {
+  return (
+    <div className="animate-org4 transform rotate-45">
       <img src={CardBack} alt="Magic Card Back" className="max-w-xs" />
     </div>
   );
