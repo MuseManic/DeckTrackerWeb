@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className="relative w-full h-screen flex flex-col items-center overflow-hidden">
-      <Navbar />
+
       <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
       <ImageContainer/>
         <DiagonalBanner1 />
@@ -64,22 +64,6 @@ function LoadImage4() {
   );
 }
 
-function Navbar() {
-  return (
-    <div className="w-full bg-blue-300 p-2">
-      <div className="flex justify-center">
-        <Link to="/track" className="font-bold rounded m-2 p-6 border-2 border-solid border-blue-700 bg-blue-500 hover:bg-cyan-400">
-          Track
-        </Link>
-        <Link to="/about" className="font-bold rounded m-2 p-6 border-2 border-solid border-blue-700 bg-blue-500 hover:bg-cyan-400">
-          About
-        </Link>
-        <Link to="/contact" className="font-bold rounded m-2 p-6 border-2 border-solid border-blue-700 bg-blue-500 hover:bg-cyan-400">
-          Contact
-        </Link>
-      </div>
-    </div>
-  );
-}
+
 
 export default Home;
