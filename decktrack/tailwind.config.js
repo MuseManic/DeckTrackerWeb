@@ -27,12 +27,20 @@ module.exports = {
           '100%': { transform: 'rotate(45deg)' },
         },
         org3: {
-          '0%': { transform: 'rotate(213deg)' },
+          '0%': { transform: 'rotate(141deg)' },
           '100%': { transform: 'rotate(45deg)' },
         },
         org4: {
           '0%': { transform: 'rotate(138deg)' },
           '100%': { transform: 'rotate(45deg)' },
+        },
+        bunch: {
+          '0%': {marginLeft: '0px' },
+          '100%': { transform: 'rotate(360deg)', left: '10px', top: '50vh' }
+        },
+        moveTop: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100vh)' }, // Moves the image to the top
         },
      
 
@@ -40,14 +48,15 @@ module.exports = {
 
       },
       
-
       animation: {
        
-        fadeIn: 'fadeIn 8s ease-in',
-        org:  'org 2s ease-in',
+        fadeIn: 'fadeIn 4s ease-in',
+        org:  'org 2.5s ease-in',
         org2:  'org2 3s ease-in',
-        org3:  'org3 5s ease-in',
-        org4:  'org4 5s ease-in',
+        org3:  'org3 2s ease-in',
+        org4:  'org4 3s ease-in',
+        bunch: 'bunch 2s ease-in forwards',
+        moveTop: 'moveTop 3s ease-in-out forwards',
       },
   
 },

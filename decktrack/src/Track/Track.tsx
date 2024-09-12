@@ -1,41 +1,78 @@
-
-import CardBack from '../assets/magiccardback.jpeg';
-
+import { SetStateAction, useState } from "react";
 
 
-function ScatteredImages() {
-  // Number of images to display
-  const numberOfImages = 10;
+function DeckInput() {
 
-  // Function to generate a random position
-  const getRandomPosition = () => {
-    const x = Math.floor(Math.random() * window.innerWidth);
-    const y = Math.floor(Math.random() * window.innerHeight);
-    return { x, y };
-  };
+    const [text, setText] = useState("");
+    const handleChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+      setText(event.target.value);
+    };
 
-  // Generate an array of image positions
-  const imagePositions = Array.from({ length: numberOfImages }).map(() => getRandomPosition());
+return (
+
+    <form>
+    <input className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded-full py-3 px-6"
+      type="text" 
+      value={text} 
+      onChange={handleChange} 
+      placeholder="Enter text here"
+    />
+   
+    </form>
+
+);
+
+}
+
+function DeckName () {
+
+    return (
+    <div className="border-2 border-black rounded-md p-4 max-w-md mx-auto">
+    <form>
+      <div className="mb-4">
+        <label className="block text-gray-700 text-sm font-bold mb-2">
+          Deck Name
+        </label>
+        <div className="flex items-center space-x-16">
+          <DeckInput />
+          <button className="text-black bg-blue-200 px-4 py-2 rounded-md hover:bg-blue-300">
+            Add Deck
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+    );
+
+}
+
+
+function DeckColor () {
+
+
+
+
+}
+
+function Track() {
+
+ 
 
   return (
-    <div className="relative w-full h-screen">
-      {imagePositions.map((position, index) => (
-        <img
-          key={index}
-          src={CardBack}
-          alt="Magic Card Back"
-          className="absolute"
-          style={{
-            left: `${position.x}px`,
-            top: `${position.y}px`,
-            width: '100px', // Adjust size as needed
-            height: 'auto',
-            transform: 'rotate(0deg)', // Optional: You can add random rotation here if desired
-          }}
-        />
-      ))}
-    </div>
+
+    <>
+    <div>
+    
+    <DeckName/>
+
+
+
+
+   </div>
+   </>
+    
+
   );
 }
 
-export default ScatteredImages;
+export default Track;

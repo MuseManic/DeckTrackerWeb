@@ -1,5 +1,5 @@
 import CardBack from '../assets/magiccardback.jpeg';
-import { Link } from 'react-router-dom';
+
 
 function Home() {
   return (
