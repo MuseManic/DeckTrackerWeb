@@ -26,6 +26,7 @@ return (
 
 function DeckName () {
 
+  
     return (
     <div className="border-2 border-black rounded-md p-4 max-w-md mx-auto">
     <form>
@@ -43,14 +44,64 @@ function DeckName () {
     </form>
   </div>
     );
+  
 
 }
 
 
 function DeckColor () {
 
+ 
+  return (
+    <>
+    <div className="border-2 border-black rounded-md p-4 max-w-md mx-auto">
+    <form>
+    <div className="mb-4">
+      <label className="block text-gray-700 text-sm font-bold mb-2">
+        Deck Colour
+      </label>
+      <div className="flex items-center space-x-16">
+        <DeckInput />
+        <button className="text-black bg-blue-200 px-4 py-2 rounded-md hover:bg-blue-300">
+          Add Colour
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+    </>
+
+   
+  
+  );
+}
+
+function DeckTheme ()
+{
+
+  return (
+  <>
+  <div className="border-2 border-black rounded-md p-4 max-w-md mx-auto">
+    <form>
+    <div className="mb-4">
+      <label className="block text-gray-700 text-sm font-bold mb-2">
+        Deck Theme
+      </label>
+      <div className="flex items-center space-x-16">
+        <DeckInput />
+        <button className="text-black bg-blue-200 px-4 py-2 rounded-md hover:bg-blue-300">
+          Add Theme
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+  </>
 
 
+
+  );
 
 }
 
@@ -64,6 +115,9 @@ function Track() {
     <div>
     
     <DeckName/>
+    <DeckColor/>
+    <DeckTheme/>
+  
 
 
 

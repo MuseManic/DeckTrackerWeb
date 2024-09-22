@@ -31,6 +31,7 @@ function Navbar() {
     <div className="w-full bg-blue-300 p-2">
         <div className="flex justify-left">
         <Link to="/" className='justify-center'><img src={CardBack} className='w-12'></img></Link>
+        <h1 className="animiate-fadeIn text-black text-2xl font-bold mt-4">Deck Tracker</h1>
         </div>
       <div className="flex justify-center">
         <Link to="/track" className="font-bold rounded m-2 p-4 border-2 border-solid border-blue-700 bg-blue-500 hover:bg-cyan-400">
