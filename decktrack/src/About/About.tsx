@@ -75,7 +75,7 @@ function About2() {
           className="absolute animate-moveTop"
           style={{
             left:'100px',
-            top: '0px',
+            top: `${position2}px`,
             width: '100px', // Adjust size as needed
             height: 'auto',
           }}

@@ -25,11 +25,14 @@ function ContactCard () {
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2">
           Name
+          <NameBox/>
         </label>
         <label className="block text-gray-700 text-sm font-bold mb-2">
            Email 
+           <EmailBox/>
         </label>
         <label className="block text-gray-700 text-sm font-bold mb-2">Message 
+        <MessageBox/>
         </label>
         </div>
     </form>
@@ -44,6 +47,7 @@ function ContactCard () {
 
         return (
         <>
+        <h1>Test</h1>
         
         </>
 
@@ -56,7 +60,7 @@ function ContactCard () {
 
         return (
         <>
-        
+             <h1>Test</h1>
         </>
 
         );
@@ -68,7 +72,7 @@ function ContactCard () {
 
         return (
         <>
-        
+             <h1>Test</h1>
         </>
 
         );
