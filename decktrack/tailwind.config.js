@@ -42,6 +42,10 @@ module.exports = {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-100vh)' }, // Moves the image to the top
         },
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
      
 
 
@@ -57,6 +61,7 @@ module.exports = {
         org4:  'org4 3s ease-in',
         bunch: 'bunch 2s ease-in forwards',
         moveTop: 'moveTop 3s ease-in-out forwards',
+        slideDown: 'slideDown 0.5s ease-out',
       },
   
 },
